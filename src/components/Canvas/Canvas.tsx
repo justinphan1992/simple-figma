@@ -5,7 +5,6 @@ import { ICustomObject } from "@/types";
 import { useCanvasContext } from "@/context/CanvasContext";
 import { fabric } from "fabric";
 
-
 const Canvas = () => {
   const { node } = useCanvasContext();
   const canvasRef = useRef<HTMLCanvasElement>(null);

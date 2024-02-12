@@ -4,13 +4,18 @@ import { v4 } from "uuid";
 
 
 export const initFabric = (canvasRef: React.RefObject<HTMLCanvasElement>) => {
+  fabric.Object.prototype.set({
+    transparentCorners: false,
+    cornerStyle: 'circle',
+    cornerColor: '#3880ff',
+    cornerSize: 12,
+  })
+
   return new fabric.Canvas(canvasRef.current, {
     width: canvasRef.current?.width,
     height: canvasRef.current?.height,
     selectionKey: 'shiftKey',
-    backgroundColor: '#eeeeee',
-    selectionBorderColor: 'blue',
-    selectionLineWidth: 1,
+    backgroundColor: 'pink',
   })
 }
 
